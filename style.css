@@ -1,0 +1,53 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    background :#0c192c;
+}
+
+
+.container{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+.bubbles{
+    position: relative;
+    display: flex;
+}
+
+.bubbles span{
+    position: relative;
+    width: 5px;
+    height: 5px;
+    background: rgb(254, 255, 255);
+    margin: 0 4px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px #f7f8f9,
+    0 0 50 px  #f7f8f9,
+    0 0 100 px  #f7f8f9;
+    animation: animate 1s linear infinite;
+    animation-duration: calc(250s / var(--i));
+
+}
+.bubbles span::nth :nth-child(even){
+    box-shadow: 0 0 0 10px #97bade,
+    0 0 50 px  #757677,
+    0 0 100 px  #6a6b6b;
+}
+
+@keyframes animate {
+    
+    0% {
+        transform: translateY(100vh) scale(1);
+    }
+    
+}
